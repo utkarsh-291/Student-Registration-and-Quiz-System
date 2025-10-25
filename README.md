@@ -37,7 +37,7 @@ A comprehensive, command-line (CLI) application built with Python and SQLite. Th
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/utkarsh-291/Student-Registration-and-Quiz-System.git]
+    git clone https://github.com/utkarsh-291/Student-Registration-and-Quiz-System.git
     ```
 2.  **Navigate to the directory:**
     ```bash
