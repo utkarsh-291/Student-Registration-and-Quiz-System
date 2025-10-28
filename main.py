@@ -118,11 +118,10 @@ def main():
         elif main_choice == '2':
             admin_menu_loop()
         elif main_choice == '3':
-            print("\nGoodbye!")
+            print("Goodbye!")
             break
         else:
-            print("\nInvalid choice. Please select 1, 2, or 3.")
+            print()
+            print("Invalid choice. Please select 1, 2, or 3.")
 
-# This ensures the main function runs only when this file is executed directly.
-if __name__ == "__main__":
-    main()
+main()

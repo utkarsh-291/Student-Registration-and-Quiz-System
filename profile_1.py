@@ -2,10 +2,12 @@ import data
 
 def show_profile():
     if not data.session["is_logged_in"]:
-        print("\nPlease log in first to view your profile.")
+        print()
+        print("Please log in first to view your profile.")
         return
 
-    print("\n--- Student Profile ---")
+    print()
+    print("--- Student Profile ---")
     enrollment = data.session["enrollment"]
     
     conn = data.get_db_connection()
@@ -24,10 +26,12 @@ def show_profile():
 
 def update_profile():
     if not data.session["is_logged_in"]:
-        print("\nPlease log in first to update your profile.")
+        print()
+        print("Please log in first to update your profile.")
         return
-
-    print("\n--- Update Profile ---")
+    
+    print()
+    print("--- Update Profile ---")
     print("Leave a field blank and press Enter if you don't want to change it.")
     
     enrollment = data.session["enrollment"]
@@ -52,7 +56,8 @@ def update_profile():
             fields_to_update[key] = new_value
 
     if not fields_to_update:
-        print("\nNo changes were made.")
+        print()
+        print("No changes were made.")
         conn.close()
         return
 
@@ -67,6 +72,7 @@ def update_profile():
         conn.commit()
         print("\nProfile updated successfully!")
     except Exception as e:
-        print(f"\nAn error occurred while updating: {e}")
+        print()
+        print(f"An error occurred while updating: {e}")
     
     conn.close()

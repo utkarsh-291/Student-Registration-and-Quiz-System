@@ -13,7 +13,7 @@ def start_quiz():
     questions_rows = conn.execute("SELECT * FROM questions").fetchall()
     
     if not questions_rows:
-        print("No questions are available at the moment. Please ask an admin to add some.")
+        print("No questions are available at the moment.")
         conn.close()
         return
     
